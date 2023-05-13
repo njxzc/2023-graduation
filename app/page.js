@@ -36,17 +36,18 @@ export default function Home() {
 								<TimelineDot color={colors[Math.floor(Math.random() * colors.length)]} />
 								{index !== photolist.length - 1 && <TimelineConnector />}
 							</TimelineSeparator>
-							<TimelineContent className="flex flex-col md:flex-row items-center">
-								<div className={`${index % 2 === 0 ? 'md:order-1' : 'md:order-2'} flex-1 cursor-pointer`} onClick={() => handleImageClick(index)}>
-									<Image 
-										src={photo.original} 
-										alt={photo.description} 
-										width={1024} 
-										height={768} 
+							<TimelineContent className="flex flex-col items-center justify-center">
+								<div className="my-4 py-2 cursor-pointer" onClick={() => handleImageClick(index)}>
+									<Image
+										src={photo.original}
+										alt={photo.description}
+										width={768}
+										height={576}
+										className="mx-auto"
 									/>
-									<div className={`${index % 2 === 0 ? 'md:order-2 md:ml-6' : 'md:order-1 md:mr-6'} mt-2 flex-1`}>
-										<p className="text-lg font-bold text-center">{photo.description}</p>
-									</div>
+								</div>
+								<div className="text-lg font-bold text-center">
+									<p>{photo.description}</p>
 								</div>
 							</TimelineContent>
 						</TimelineItem>
@@ -56,9 +57,9 @@ export default function Home() {
 			<Lightbox
 				open={open}
 				close={() => setOpen(false)}
-				currentIndex={currentImageIndex}
+				index={currentImageIndex}
 				slides={photolist.map(photo => ({ src: photo.original, alt: photo.description }))}
 			/>
-		</main>
+	  </main>
 	)
 }

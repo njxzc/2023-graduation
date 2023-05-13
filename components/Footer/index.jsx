@@ -1,29 +1,24 @@
 'use client'
 import { useState, useEffect } from 'react'
+import getSongslist from '@/lib/getSongslist'
 
 export default function Footer() {
-
 	const [ap, setAp] = useState(null)
+	const songs = getSongslist()
 
 	useEffect(() => {
 		const initializeAPlayer = () => {
-		  if (typeof window !== 'undefined' && window.APlayer && !ap) {
+			if (typeof window !== 'undefined' && window.APlayer && !ap) {
 				const player = new APlayer({
 					container: document.getElementById('aplayer'),
 					fixed: true,
-					audio: [{
-						'name': '干杯（晓庄版）',
-						'artist': '晓庄青年',
-						'url': '/music/mp3/干杯（晓庄版）.mp3',
-						'cover': '/music/cover/干杯（晓庄版）.jpg'
-					}],
+					audio: songs,
 				})
 				setAp(player)
 		  }
 		}
-
 		initializeAPlayer()
-	},[ap])
+	},[ap,songs])
 
 	return (
 		<div className="mx-auto max-w-7xl px-6 py-12 flex flex-col items-center justify-center space-y-4 lg:px-8">
@@ -40,11 +35,13 @@ export default function Footer() {
 					</svg>
 				</a>
 				<a href="mailto:njxzc@proton.me" className="text-gray-400 hover:text-gray-500" target="_blank">
-					<svg t="1683897062131" className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3806" width="25" height="100%"><path d="M512.012041 630.535466l415.548448-346.226152c-2.25174-0.409407-4.274694-1.348636-6.610724-1.348636L103.074318 282.960677c-2.287865 0-4.32286 0.927187-6.5746 1.348636L512.012041 630.535466zM958.133584 320.144497c0-3.901411-1.071684-7.513829-2.25174-11.06604L661.313264 554.602446l295.014111 295.074318c0.758608-2.974224 1.806209-5.840075 1.806209-9.055127L958.133584 320.144497zM68.15428 309.042333c-1.143932 3.576294-2.287865 7.140546-2.287865 11.102164l0 520.465099c0 3.251176 1.119849 6.104986 1.854374 9.07921l295.110442-295.098401L68.15428 309.042333zM632.582502 578.492568l-108.697648 90.539229c-3.407714 2.901976-7.622201 4.298777-11.872813 4.298777-4.214487 0-8.453057-1.396802-11.896896-4.298777l-108.601317-90.491063L94.079398 875.963123c2.926058 0.770649 5.828034 1.842333 8.99492 1.842333l817.887488 0c3.227093 0 6.129069-1.059643 9.115334-1.842333L632.582502 578.492568z" fill="#272636" p-id="3807"></path></svg>
+					<svg t="1683897062131" className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3806" width="25" height="100%">
+						<path d="M512.012041 630.535466l415.548448-346.226152c-2.25174-0.409407-4.274694-1.348636-6.610724-1.348636L103.074318 282.960677c-2.287865 0-4.32286 0.927187-6.5746 1.348636L512.012041 630.535466zM958.133584 320.144497c0-3.901411-1.071684-7.513829-2.25174-11.06604L661.313264 554.602446l295.014111 295.074318c0.758608-2.974224 1.806209-5.840075 1.806209-9.055127L958.133584 320.144497zM68.15428 309.042333c-1.143932 3.576294-2.287865 7.140546-2.287865 11.102164l0 520.465099c0 3.251176 1.119849 6.104986 1.854374 9.07921l295.110442-295.098401L68.15428 309.042333zM632.582502 578.492568l-108.697648 90.539229c-3.407714 2.901976-7.622201 4.298777-11.872813 4.298777-4.214487 0-8.453057-1.396802-11.896896-4.298777l-108.601317-90.491063L94.079398 875.963123c2.926058 0.770649 5.828034 1.842333 8.99492 1.842333l817.887488 0c3.227093 0 6.129069-1.059643 9.115334-1.842333L632.582502 578.492568z" fill="#272636" p-id="3807"></path>
+					</svg>
 				</a>
 			</div>
 			<div className="mt-8 md:order-1 md:mt-0">
-				<p className="text-center text-xs leading-5 text-gray-500">&copy; 2023 Made with ❤️ By <a href="https://blog.gujiakai.top" target='_blank'>Jiakai</a>.</p>
+				<p className="text-center text-xs leading-5 text-gray-500">&copy; 2023 Made with ❤️ By <a href="https://blog.gujiakai.top" target='_blank' className='no-underline'>Jiakai</a>.</p>
 			</div>
 		</div>
 	)

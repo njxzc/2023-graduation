@@ -21,13 +21,13 @@ export default function Navigation() {
 							<img src="/images/logo.png" alt='南京晓庄学院' className="hidden h-12 w-auto lg:block" />
 						</div>
 						<div className="hidden sm:ml-12 sm:flex sm:space-x-8">
-							<Link href="/" onClick={() => handleLinkClick('/')} className={`inline-flex items-center border-b-2 ${activeLink === '/' ? 'border-indigo-500' : 'border-transparent'} px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700`}>
+							<Link href="/" onClick={() => handleLinkClick('/')} className={`inline-flex items-center border-b-2 ${activeLink === '/' ? 'border-indigo-500' : 'border-transparent'} px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 no-underline`}>
 								时光轴
 							</Link>
-							<Link href="/archive" onClick={() => handleLinkClick('/archive')} className={`inline-flex items-center border-b-2 ${activeLink === '/archive' ? 'border-indigo-500' : 'border-transparent'} px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700`}>
-								再见晓庄
+							<Link href="/members" onClick={() => handleLinkClick('/archive')} className={`inline-flex items-center border-b-2 ${activeLink === '/archive' ? 'border-indigo-500' : 'border-transparent'} px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 no-underline`}>
+								班级成员
 							</Link>
-							<Link href="/about" onClick={() => handleLinkClick('/about')} className={`inline-flex items-center border-b-2 ${activeLink === '/about' ? 'border-indigo-500' : 'border-transparent'} px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700`}>
+							<Link href="/about" onClick={() => handleLinkClick('/about')} className={`inline-flex items-center border-b-2 ${activeLink === '/about' ? 'border-indigo-500' : 'border-transparent'} px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 no-underline`}>
 								关于
 							</Link>
 						</div>
@@ -50,13 +50,13 @@ export default function Navigation() {
 			{isMobileMenuOpen && (
 				<div className="sm:hidden" id="mobile-menu">
 					<div className="space-y-1 pb-3 pt-2">
-						<Link href="/" onClick={() => handleLinkClick('/')} className={`block border-l-4 ${activeLink === '/' ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-transparent text-gray-500'} py-2 pl-3 pr-4 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700`}>
+						<Link href="/" onClick={() => handleLinkClick('/')} className={`block border-l-4 ${activeLink === '/' ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-transparent text-gray-500'} py-2 pl-3 pr-4 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700 no-underline`}>
 							时光轴
 						</Link>
-						<Link href="/archive" onClick={() => handleLinkClick('/archive')} className={`block border-l-4 ${activeLink === '/archive' ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-transparent text-gray-500'} py-2 pl-3 pr-4 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700`}>
-							再见晓庄
+						<Link href="/members" onClick={() => handleLinkClick('/archive')} className={`block border-l-4 ${activeLink === '/archive' ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-transparent text-gray-500'} py-2 pl-3 pr-4 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700 no-underline`}>
+							班级成员
 						</Link>
-						<Link href="/about" onClick={() => handleLinkClick('/about')} className={`block border-l-4 ${activeLink === '/about' ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-transparent text-gray-500'} py-2 pl-3 pr-4 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700`}>
+						<Link href="/about" onClick={() => handleLinkClick('/about')} className={`block border-l-4 ${activeLink === '/about' ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-transparent text-gray-500'} py-2 pl-3 pr-4 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700 no-underline`}>
 							关于
 						</Link>
 					</div>
