@@ -15,24 +15,20 @@ export default function Navigation() {
 		<nav className="bg-gray-800 shadow">
 			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 				<div className="flex h-16 justify-between">
-					<div className="flex">
-						<div className="flex flex-shrink-0 items-center">
-							<img src="/images/logo.png" alt='南京晓庄学院' className="block h-12 w-auto lg:hidden" />
-							<img src="/images/logo.png" alt='南京晓庄学院' className="hidden h-12 w-auto lg:block" />
-						</div>
-						<div className="hidden sm:ml-12 sm:flex sm:space-x-8">
-							<Link href="/" onClick={() => handleLinkClick('/')} className={`inline-flex items-center border-b-2 ${activeLink === '/' ? 'border-indigo-500' : 'border-transparent'} px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 no-underline`}>
-								时光轴
-							</Link>
-							<Link href="/members" onClick={() => handleLinkClick('/archive')} className={`inline-flex items-center border-b-2 ${activeLink === '/archive' ? 'border-indigo-500' : 'border-transparent'} px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 no-underline`}>
-								班级成员
-							</Link>
-							<Link href="/about" onClick={() => handleLinkClick('/about')} className={`inline-flex items-center border-b-2 ${activeLink === '/about' ? 'border-indigo-500' : 'border-transparent'} px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 no-underline`}>
-								关于
-							</Link>
-						</div>
+					<div className="flex justify-center sm:justify-start items-center flex-shrink-0 text-base font-sans">
+						<Link href="/" onClick={() => handleLinkClick('/')} className="no-underline text-white">南晓2023届19计科卓工毕业留念</Link>
 					</div>
-					<div className="flex justify-items-center items-center text-sm font-sans text-white">南晓2023届19计科卓工毕业留念</div>
+					<div className="hidden sm:ml-12 sm:flex sm:space-x-8">
+						<Link href="/" onClick={() => handleLinkClick('/')} className={`inline-flex items-center border-b-2 ${activeLink === '/' ? 'border-indigo-500' : 'border-transparent'} px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 no-underline`}>
+								时光轴
+						</Link>
+						<Link href="/members" onClick={() => handleLinkClick('/archive')} className={`inline-flex items-center border-b-2 ${activeLink === '/archive' ? 'border-indigo-500' : 'border-transparent'} px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 no-underline`}>
+								班级成员
+						</Link>
+						<Link href="/about" onClick={() => handleLinkClick('/about')} className={`inline-flex items-center border-b-2 ${activeLink === '/about' ? 'border-indigo-500' : 'border-transparent'} px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 no-underline`}>
+								关于
+						</Link>
+					</div>
 					<div className="-mr-2 flex items-center sm:hidden">
 						<button type="button" onClick={() => setMobileMenuOpen(!isMobileMenuOpen)} className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
 							<span className="sr-only">Open main menu</span>
