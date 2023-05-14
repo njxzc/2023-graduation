@@ -16,16 +16,19 @@ export default function Navigation() {
 			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 				<div className="flex h-16 justify-between">
 					<div className="flex justify-center sm:justify-start items-center flex-shrink-0 text-base font-sans">
-						<Link href="/" onClick={() => handleLinkClick('/')} className="no-underline text-white">南晓2023届19计科卓工毕业留念</Link>
+						<Link href="/" onClick={() => handleLinkClick('/')} className="no-underline text-white">南晓2023届毕业留念</Link>
 					</div>
 					<div className="hidden sm:ml-12 sm:flex sm:space-x-8">
-						<Link href="/" onClick={() => handleLinkClick('/')} className={`inline-flex items-center border-b-2 ${activeLink === '/' ? 'border-indigo-500' : 'border-transparent'} px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 no-underline`}>
+						<Link href="/" onClick={() => handleLinkClick('/')} className={`inline-flex items-center border-b-2 ${activeLink === '/' ? 'border-indigo-500' : 'border-transparent'} px-1 pt-1 text-sm font-medium text-white hover:border-gray-300 hover:text-gray-700 no-underline`}>
 								时光轴
 						</Link>
-						<Link href="/members" onClick={() => handleLinkClick('/archive')} className={`inline-flex items-center border-b-2 ${activeLink === '/archive' ? 'border-indigo-500' : 'border-transparent'} px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 no-underline`}>
+						<Link href="/roommates" onClick={() => handleLinkClick('/archive')} className={`inline-flex items-center border-b-2 ${activeLink === '/archive' ? 'border-indigo-500' : 'border-transparent'} px-1 pt-1 text-sm font-medium text-white hover:border-gray-300 hover:text-gray-700 no-underline`}>
+								宿舍成员
+						</Link>
+						<Link href="/classmates" onClick={() => handleLinkClick('/archive')} className={`inline-flex items-center border-b-2 ${activeLink === '/archive' ? 'border-indigo-500' : 'border-transparent'} px-1 pt-1 text-sm font-medium text-white hover:border-gray-300 hover:text-gray-700 no-underline`}>
 								班级成员
 						</Link>
-						<Link href="/about" onClick={() => handleLinkClick('/about')} className={`inline-flex items-center border-b-2 ${activeLink === '/about' ? 'border-indigo-500' : 'border-transparent'} px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 no-underline`}>
+						<Link href="/about" onClick={() => handleLinkClick('/about')} className={`inline-flex items-center border-b-2 ${activeLink === '/about' ? 'border-indigo-500' : 'border-transparent'} px-1 pt-1 text-sm font-medium text-white hover:border-gray-300 hover:text-gray-700 no-underline`}>
 								关于
 						</Link>
 					</div>
@@ -49,7 +52,10 @@ export default function Navigation() {
 						<Link href="/" onClick={() => handleLinkClick('/')} className={`block border-l-4 ${activeLink === '/' ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-transparent text-gray-500'} py-2 pl-3 pr-4 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700 no-underline`}>
 							时光轴
 						</Link>
-						<Link href="/members" onClick={() => handleLinkClick('/archive')} className={`block border-l-4 ${activeLink === '/archive' ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-transparent text-gray-500'} py-2 pl-3 pr-4 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700 no-underline`}>
+						<Link href="/roommates" onClick={() => handleLinkClick('/roommates')} className={`block border-l-4 ${activeLink === '/roommates' ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-transparent text-gray-500'} py-2 pl-3 pr-4 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700 no-underline`}>
+							宿舍成员
+						</Link>
+						<Link href="/classmates" onClick={() => handleLinkClick('/classmates')} className={`block border-l-4 ${activeLink === '/classmates' ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-transparent text-gray-500'} py-2 pl-3 pr-4 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700 no-underline`}>
 							班级成员
 						</Link>
 						<Link href="/about" onClick={() => handleLinkClick('/about')} className={`block border-l-4 ${activeLink === '/about' ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-transparent text-gray-500'} py-2 pl-3 pr-4 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700 no-underline`}>

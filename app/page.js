@@ -16,7 +16,7 @@ export default function Home() {
 	const photolist = getPhotolist()
 	const [open, setOpen] = React.useState(false)
 	const [currentImageIndex, setCurrentImageIndex] = React.useState(0)
-	const colors = ['error', 'grey', 'info', 'inherit', 'primary', 'secondary', 'success', 'warning']
+	const colors = ['info', 'primary', 'secondary', 'success', 'warning']
 
 	const handleImageClick = (index) => {
 		setCurrentImageIndex(index)

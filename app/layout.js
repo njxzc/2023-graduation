@@ -8,9 +8,9 @@ import Script from 'next/script'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-	title: '南晓2023届19计科卓工毕业留念',
-	description: '南晓2023届19计科卓工毕业留念',
-	keywords: '南京晓庄学院,2023届,毕业留念,19计科卓工',
+	title: '南晓2023届毕业留念',
+	description: '南晓2023届毕业留念',
+	keywords: '南京晓庄学院,2023届,毕业留念,19计科卓工,204c',
 }
 
 export default function RootLayout({ children }) {
