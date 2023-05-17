@@ -29,8 +29,12 @@ export default function Home() {
 				{
 					photolist.map((photo, index) => (
 						<TimelineItem key={index}>
-							<TimelineOppositeContent>
+							<TimelineOppositeContent className="flex flex-col justify-start space-y-4">
 								<p>{photo.date}</p>
+								{photo.details && (
+									 <div className="hidden 2xl:flex text-sm text-center flex-grow items-center" dangerouslySetInnerHTML={{ __html: photo.details.replace(/\n/g, '<br />') }}>
+									 </div>
+								)}
 							</TimelineOppositeContent>
 							<TimelineSeparator>
 								<TimelineDot color={colors[Math.floor(Math.random() * colors.length)]} />
